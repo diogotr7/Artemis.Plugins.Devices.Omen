@@ -1,0 +1,10 @@
+{
+  "Guid": "e14993a1-54f2-445e-8f68-2aa5782c398c",
+  "Name": "HP Omen Devices",
+  "Description": "HP Omen device support",
+  "Author": "diogotr7",
+  "Website": null,
+  "Repository": null,
+  "Version": "1.0.0.0",
+  "Main": "Artemis.Plugins.Devices.Omen.dll"
+}
