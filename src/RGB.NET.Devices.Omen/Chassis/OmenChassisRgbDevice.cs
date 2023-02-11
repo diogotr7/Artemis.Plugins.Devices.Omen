@@ -14,9 +14,10 @@ namespace RGB.NET.Devices.Omen
 
         protected virtual void InitializeLayout()
         {
+            //Note: Chassis LedId 0 means all LEDS. Start from 1.
             for(var i = 1; i < 10; i++)
             {
-                AddLed(LedId.Unknown1 + i, new Point(i * 20, 0), new Size(19), i);
+                AddLed(LedId.Custom1 + i, new Point(i * 20, 0), new Size(19), i);
             }
         }
 
