@@ -17,11 +17,13 @@ namespace RGB.NET.Devices.Omen
             _speakerHandle = handle;
         }
 
-        protected override void Update(in ReadOnlySpan<(object key, Color color)> dataSet)
+        protected override bool Update(in ReadOnlySpan<(object key, Color color)> dataSet)
         {
             var color = dataSet[0].color;
 
             _OmenLightingSDK.OmenSpeakerSetStatic(_speakerHandle, LightingColor.FromColor(color), IntPtr.Zero);
+            
+            return true;
         }
     }
 }

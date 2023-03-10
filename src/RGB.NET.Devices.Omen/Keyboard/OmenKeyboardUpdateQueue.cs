@@ -18,7 +18,7 @@ namespace RGB.NET.Devices.Omen
             _keyboardHandle = handle;
         }
 
-        protected override void Update(in ReadOnlySpan<(object key, Color color)> dataSet)
+        protected override bool Update(in ReadOnlySpan<(object key, Color color)> dataSet)
         {
             StaticKeyEffect[] keys = new StaticKeyEffect[dataSet.Length];
 
@@ -30,6 +30,8 @@ namespace RGB.NET.Devices.Omen
             }
 
             _OmenLightingSDK.OmenKeyboardSetStatic(_keyboardHandle, keys, keys.Length, IntPtr.Zero);
+
+            return true;
         }
     }
 }

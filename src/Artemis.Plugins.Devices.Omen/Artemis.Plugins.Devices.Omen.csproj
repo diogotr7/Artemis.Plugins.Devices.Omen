@@ -11,12 +11,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ArtemisRGB.UI.Shared" IncludeAssets="compile;build;buildTransitive" Version="1.2023.203.1" />
+    <PackageReference Include="ArtemisRGB.UI.Shared" IncludeAssets="compile;build;buildTransitive" Version="1.2023.306.3" />
   </ItemGroup>
   
   <ItemGroup>
-    <Content Include="x64\OmenLightingSDK.dll"  CopyToOutputDirectory="PreserveNewest" />
-    <Content Include="Layouts\**"  CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="x64\OmenLightingSDK.dll" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Layouts\**" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
   <ItemGroup>

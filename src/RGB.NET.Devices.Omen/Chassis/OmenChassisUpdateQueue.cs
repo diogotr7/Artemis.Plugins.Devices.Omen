@@ -17,7 +17,7 @@ namespace RGB.NET.Devices.Omen
             _chassisHandle = handle;
         }
 
-        protected override void Update(in ReadOnlySpan<(object key, Color color)> dataSet)
+        protected override bool Update(in ReadOnlySpan<(object key, Color color)> dataSet)
         {
             for (var i = 0; i < dataSet.Length; i++)
             {
@@ -25,6 +25,8 @@ namespace RGB.NET.Devices.Omen
 
                 _OmenLightingSDK.OmenChassisSetStatic(_chassisHandle, (int)key, LightingColor.FromColor(color), IntPtr.Zero);
             }
+            
+            return true;
         }
     }
 }
