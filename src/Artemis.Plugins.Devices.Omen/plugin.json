@@ -6,5 +6,6 @@
   "Website": null,
   "Repository": null,
   "Version": "1.0.0.0",
+  "Api": "1.0",
   "Main": "Artemis.Plugins.Devices.Omen.dll"
 }
