@@ -31,7 +31,7 @@ namespace RGB.NET.Devices.Omen
         /// <inheritdoc />
         protected override IEnumerable<IRGBDevice> LoadDevices()
         {
-            var keyboard = _OmenLightingSDK.OmenKeyboardOpen();
+            var keyboard = _OmenLightingSDK.OmenKeyboardOpenByName("Woodstock");
             if (keyboard != IntPtr.Zero)
                 yield return new OmenKeyboardRgbDevice(new OmenRgbDeviceInfo(RGBDeviceType.Keyboard, "Keyboard", keyboard), GetUpdateTrigger());
 
