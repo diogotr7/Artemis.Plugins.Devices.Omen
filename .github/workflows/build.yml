@@ -1,0 +1,25 @@
+name: Build Plugins
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: [windows-latest]
+
+    steps:
+      - name: Setup .NET 6.0
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.x'
+          
+      - name: Clone Plugins
+        uses: actions/checkout@v2
+
+      - name: Build Plugin
+        run: dotnet publish -c Release src/Artemis.Plugins.Devices.Omen.sln
+
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: Artemis.Plugins.Devices.Omen
+          path: src/Artemis.Plugins.Devices.Omen/bin/x64/Release/net6.0/publish
