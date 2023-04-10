@@ -7,10 +7,10 @@ jobs:
     runs-on: [windows-latest]
 
     steps:
-      - name: Setup .NET 6.0
+      - name: Setup .NET
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: '7.0.x'
           
       - name: Clone Plugins
         uses: actions/checkout@v2
@@ -22,4 +22,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: Artemis.Plugins.Devices.Omen
-          path: src/Artemis.Plugins.Devices.Omen/bin/x64/Release/net6.0/publish
+          path: src/Artemis.Plugins.Devices.Omen/bin/x64/Release/net7.0/publish
