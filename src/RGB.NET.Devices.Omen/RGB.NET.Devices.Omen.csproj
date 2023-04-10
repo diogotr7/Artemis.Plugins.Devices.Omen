@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="RGB.NET.Core" Version="2.0.0-prerelease.17" />
+    <PackageReference Include="RGB.NET.Core" Version="2.0.0-prerelease.29" />
   </ItemGroup>
 
 </Project>
